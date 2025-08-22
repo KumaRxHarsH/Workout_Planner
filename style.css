@@ -1,0 +1,259 @@
+/* Fullscreen Background Video */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* keeps video proportion and fills screen */
+    z-index: -2; /* sends it behind your text */
+  }
+  
+
+
+
+#landing {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+
+    display: flex;
+    flex-direction: column;   /* stack vertically */
+    justify-content: center;  /* center vertically */
+    align-items: center;      /* center horizontally */
+
+    text-align: center;
+    z-index: 9999;
+    animation: zoomFade 2s ease forwards;
+}
+
+#landing .neon-title {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #ff0000;
+    text-shadow: 0 0 10px #310c0c, 0 0 20px #a80707, 0 0 40px #b81712;
+    font-family: 'Arial Black', system-ui, sans-serif;
+    margin: 0;   /* prevents extra space */
+}
+
+#landing .neon-slogan {
+    margin-inline-start: 200px;
+    font-size: 2rem;
+    font-weight: 800;
+    color: transparent;                  /* make inside transparent */
+    -webkit-text-stroke: 0.2px #ffffff;    /* stroke color + thickness */
+    text-transform: uppercase;           /* makes it bold like Nike */
+    letter-spacing: 8px;
+    font-family: 'Rajdhani', sans-serif;
+
+}
+
+@keyframes zoomFade {
+    0% { transform: scale(1); opacity: 1; }
+    80% { transform: scale(2); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+}
+
+
+body.landing-hidden #landing {
+    display: none;
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    text-align: left;
+    background: #111;
+    color: rgb(243, 243, 243);
+}
+.height-inputs {
+    display: flex;
+    gap: 10px;
+  }
+  .height-inputs input {
+    width: 80px;
+  }
+  
+
+.container {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 40px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(148, 139, 139, 0.938);
+}
+
+
+.container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: white;
+}
+
+.container input,
+.container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #ff0033;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ad2748;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    color: rgba(255, 255, 255, 0.753);
+    background: rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+   
+    text-align: center;
+    padding: 10px 0;
+    color: rgba(255, 255, 255, 0.514);
+    font-size: 14px;
+  }
+
+#goal-setting label {
+    background: rgba(0,0,0,0.5);
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.next-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0011ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.next-btn:hover {
+    background-color: #ff1e3c;
+}
+
+#workoutSection {
+    display: none; 
+  }
+  
+  .workout-container {
+    background: rgba(0,0,0,0.5);
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgb(240, 238, 238); 
+    text-align: center;
+  }
+  
+  #workoutTitle {
+    font-family: monospace;
+    font-size: 24px;
+    color: #ff0033;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgb(44, 26, 26), 0 0 10px rgb(134, 7, 7);
+  }
+  
+  #workoutPlan {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #workoutPlan li {
+    background: #2b2929;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.692);
+  }
+  #workoutPlan li:hover {
+    background: linear-gradient(to right, #ff0000, #000000);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.6);
+  }
+  
+  #workoutSection .back {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #f30909;   /* Gray for Back */
+    color: white;
+    transition: 0.3s;
+  }
+  
+  #workoutSection .back:hover {
+    background-color: #5a6268;
+  }
+
+  #workoutPlan li {
+    padding: 10px;
+    margin: 8px 0;
+    list-style: none;
+    background: rgba(255,255,255,0.1);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #workoutPlan li:hover {
+    background: rgba(255,0,0,0.4);
+    transform: scale(1.05);
+  }
+  
+  
+  

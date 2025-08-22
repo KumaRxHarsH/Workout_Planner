@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO x FITNESS - Workout Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body>
+    
+    <!-- Intro Landing Screen -->
+    <div id="landing">
+        <h1 class="neon-title">NEO x FITNESS</h1>
+        <span class="neon-slogan">JUST DO IT.</span>
+    </div>
+
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="fitness_bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+    <!-- Main Content -->
+    <header>
+        <h1>NEO x FITNESS</h1>
+        <p>Your Personal Workout Tracker</p>
+    </header>
+
+    <main>
+        <div class="container" id="info-form">
+            <h1>Enter Your Information</h1>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Enter your age">
+
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="heightFeet">Height:</label>
+            <div class="height-inputs">
+              <input type="number" id="heightFeet" placeholder="Feet">
+              <input type="number" id="heightInches" placeholder="Inches">
+            </div>
+        
+
+            <label for="weight">Current Weight (kg):</label>
+            <input type="number" id="weight" placeholder="Enter your weight in kg">
+
+            <button onclick="calculateBMI()">Calculate BMI</button>
+
+            <div id="result"></div>
+        </div>
+        <div class="container" id="goal-setting" style="display: none;">
+            <h1>Set Your Fitness Goal</h1>
+        
+            <label for="goal">Choose Your Goal:</label>
+            <select id="goal">
+                <option value="">--Select Goal--</option>
+                <option value="Weight Loss">Weight Loss</option>
+                <option value="Muscle Gain">Muscle Gain</option>
+                <option value="Endurance">Endurance</option>
+                <option value="Flexibility">Flexibility</option>
+            </select>
+        
+            <button onclick="submitGoal()">Next →</button>
+
+            
+        </div>
+        <div id="workoutSection" style="display: none;">
+  <div class="workout-container">
+    <h2 id="workoutTitle"></h2>
+    <ul id="workoutPlan"></ul>
+
+    <!-- 🔥 NEW Exercise Details Section -->
+    <div id="exerciseDetails" style="display: none;">
+      <h3 id="exerciseName"></h3>
+
+      <div id="setTimer">
+        ⏳ Time Remaining: <span id="timeLeft">--</span> seconds
+      </div>
+
+      <div>
+        <label>
+          <input type="checkbox" id="setCompleted"> ✅ I have completed this set
+        </label>
+      </div>
+
+      <div id="restTimer" style="display: none;">
+        💤 Rest Time: <span id="restTimeLeft">--</span> seconds
+      </div>
+    </div>
+    <!-- 🔥 END -->
+
+    <button class="back" onclick="goBack()">← Back</button>
+  </div>
+</div>
+
+
+          
+          
+    </main>
+
+    <footer>
+        <p>© 2025 NEO x FITNESS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
